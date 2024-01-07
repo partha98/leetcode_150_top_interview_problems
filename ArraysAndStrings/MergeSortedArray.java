@@ -1,3 +1,5 @@
+package ArraysAndStrings;
+
 /************************************
 * Merge Sorted Array 
 * Author: @partha98
@@ -22,7 +24,7 @@
 * Once the primary iteration finishes, one of the arrays will be fully traversed. At this point, we iterate through the remaining array, filling the resulting array with its elements.
 **********************************************************************************************************************************************************************************************************************/
 
-class Solution {
+class MergeSortedArray {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int lim = (m>n) ? m : n; 
         int i = 0; //index for nums1
@@ -58,3 +60,11 @@ class Solution {
         }
     }
 }
+
+/*********************************************************
+ * Complexity Analysis
+ * 
+ * Time Complexity O(m+n)
+ * Space Conplexity O(m_n)
+ * 
+ *********************************************************/
