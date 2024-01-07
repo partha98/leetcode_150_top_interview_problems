@@ -1,3 +1,5 @@
+package ArraysAndStrings;
+
 /************************************
 * Merge Sorted Array 
 * Author: @partha98
@@ -5,10 +7,10 @@
 
 /********************************************************************************************************************************************************************************************************************
 * Question
-* You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
-* Merge nums1 and nums2 into a single array sorted in non-decreasing order.
-* The final sorted array should not be returned by the function, but instead be stored inside the array nums1. 
-* To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.
+* Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.
+* Consider the number of elements in nums which are not equal to val be k, to get accepted, you need to do the following things:
+* Change the array nums such that the first k elements of nums contain the elements which are not equal to val.The remaining elements of nums are not important as well as the size of nums.
+* Return k.
 ********************************************************************************************************************************************************************************************************************/
 
 
@@ -22,39 +24,30 @@
 * Once the primary iteration finishes, one of the arrays will be fully traversed. At this point, we iterate through the remaining array, filling the resulting array with its elements.
 **********************************************************************************************************************************************************************************************************************/
 
-class Solution {
-    public void merge(int[] nums1, int m, int[] nums2, int n) {
-        int lim = (m>n) ? m : n; 
-        int i = 0; //index for nums1
-        int j = 0; //index for nums2
-        int arr[] = new int[m+n];
-        int count = 0;
-        while(i<m && j<n){
-            if(nums1[i] > nums2[j]){
-                arr[count] = nums2[j];
-                j++;
-            }
-            else{
-                arr[count] = nums1[i];
-                i++;
-            }
-            count++;
-        }
-
-        while(j<n){
-            arr[count] = nums2[j];
-            count++;
-            j++;
-        }
+class RemoveElement {
+    public int removeElement(int[] nums, int val) {
         
-        while(i<m){
-            arr[count] = nums1[i];
-            count++;
-            i++;
+        int count = 0;
+
+        if(nums.length==0){
+            return count;
         }
 
-        for(i=0;i<(m+n);i++){
-            nums1[i] = arr[i];
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]!=val){
+                nums[count] = nums[i];
+                count++;
+            }
         }
+               
+        return count;
     }
 }
+
+/*********************************************************
+ * Complexity Analysis
+ * 
+ * Time Complexity O(m+n)
+ * Space Conplexity O(m_n)
+ * 
+ *********************************************************/
