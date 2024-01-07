@@ -19,9 +19,13 @@ package ArraysAndStrings;
 *************************************/
 
 /**********************************************************************************************************************************************************************************************************************
-* Approach
-* The concept involves simultaneously traversing both arrays, each with its dedicated counter.
-* Once the primary iteration finishes, one of the arrays will be fully traversed. At this point, we iterate through the remaining array, filling the resulting array with its elements.
+* Naive/Brute force Approach
+* The problem is fairly straight forward. The brute force solution will be to create a new list and copy elements from nums into the new array and skip the element equal to val. The size of the list will be the 
+* answer. Time complexity would be O(n) and space complexity will be O(n). It can be optimized and solved in O(1) space complexity.
+*
+* Elegant Approach
+* Create a variable count. Iterate through the array and keep copying elements back into the same array but skip the elements which are equal to val. The count in this case will not only be the answer but also serve
+* as the index for the copying process.
 **********************************************************************************************************************************************************************************************************************/
 
 class RemoveElement {
@@ -47,7 +51,7 @@ class RemoveElement {
 /*********************************************************
  * Complexity Analysis
  * 
- * Time Complexity O(m+n)
- * Space Conplexity O(m_n)
+ * Time Complexity O(n)
+ * Space Conplexity O(1)
  * 
  *********************************************************/
