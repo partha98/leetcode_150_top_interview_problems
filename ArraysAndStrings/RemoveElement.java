@@ -1,7 +1,7 @@
 package ArraysAndStrings;
 
 /************************************
-* Merge Sorted Array 
+* Remove Element 
 * Author: @partha98
 *************************************/
 

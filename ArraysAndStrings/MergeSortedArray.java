@@ -22,6 +22,9 @@ package ArraysAndStrings;
 * Approach
 * The concept involves simultaneously traversing both arrays, each with its dedicated counter.
 * Once the primary iteration finishes, one of the arrays will be fully traversed. At this point, we iterate through the remaining array, filling the resulting array with its elements.
+*
+* There is another approach you can use a TreeMap. Iterate through both array store them in the treeMap and simply extract out the keys of the TreeMap. TreeMap sorts the keys. Time complexity will be O(n) and space
+* complexity will be O(n) as well.
 **********************************************************************************************************************************************************************************************************************/
 
 class MergeSortedArray {
