@@ -32,7 +32,7 @@ package ArraysAndStrings;
 * The count in this case will not only be the answer but also serve as the index for the copying process.
 **********************************************************************************************************************************************************************************************************************/
 
-class RemoveDuplicatesFromSortedArray {
+class RemoveDuplicatesFromSortedArrayII {
     public int removeDuplicates(int[] nums) {
 
         if(nums.length == 0){
